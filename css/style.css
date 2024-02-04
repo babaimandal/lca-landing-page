@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+:root{
+  --body-background-color: #32213A;
+  --button-color: #048191;
+  --images-bg-color: #FFEC51;
+  --text-color: #fff;
+  --text-bg-color: #fff;
+}
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body{
+  margin: 0;
+  padding: 0;
+
+
+}
+.container {
+    max-width: 1170px;
+    margin-inline: auto;
+    padding-block-start: 26px;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++ */
+.content-wrapper {
+    background-color: var(--body-background-color);
+    height: 707px;
+}
+.text-block{
+  max-width: 550px;
+}
+.text-block h1 {
+    font-size: 70px;
+    font-family: 'DM Serif Display', serif;
+    color: #fff;
+    line-height: 78px;
+    font-weight: 400;
+    padding-block-start: 24px;
+    margin: 0;
+}
+.text-block p {
+    font-size: 16px;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    line-height: 28px;
+    padding-block: 25px;
+    margin: 0;
+}
+.text-block button {
+    font-size: 32px;
+    color: #fff;
+    background-color: var(--button-color);
+    border: none;
+    padding-block: 15px;
+    border-radius: 2px;
+    padding-inline: 29px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    text-shadow: 0px 1px 0px rgb(0 0 0 / 74%);
+    box-shadow: -0.627px 5.967px 10px 0px rgba(35, 19, 43, 0.004);
+    margin-block-end: 20px;
+}
+.text-block button span{
+  color: var(--images-bg-color);
+
+}
+.rt-block {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: -14px;
+    right: -125px;
+}
+.rt-block .image-block{
+  height: 100%;
+  width: 100%;
+}
+.rt-block img {
+    width: 99%;
+    height: 100%;
+}
+
+.pop-up-images{
+    position: absolute;
+    width: 300px;
+    right: 10%;
+    bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+.pop-up-images .pop-up{
+        background-color: #ffffffcf;
+    backdrop-filter: blur(10px);
+    padding-block: 15px;
+    padding-inline: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 4px 10px #0000003b;
+    font-weight: 500;
+    font-style: italic;
+    border-left: 6px solid #198391;
+    z-index: 1;
+    opacity: 0;
+    animation:  fadeIn 1s ease-in-out 1 1s forwards ;
+}
+
+.pop-up-images .pop-up:nth-child(2){
+    margin-left: 30px;
+    border-color: #46374D;
+    animation-delay: 2s;
+}
+.pop-up-images .pop-up:nth-child(3){
+    animation-delay: 3s;
+    border-color: #FD5D3B;
+}
+
+.pop-up-images .pop-up p{
+    color: #000;
+  margin: 0;
+  font-size: 15px;
+}
+.pop-up-profile {
+    background-color: #ffffffcf;
+    backdrop-filter: blur(10px);
+    bottom: 10%;
+    right: 96%;
+    position: absolute;
+    width: 100%;
+    padding-block: 25px;
+    padding-inline: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 4px 10px #0000003b;
+    font-weight: 500;
+    font-style: italic;
+}
+.pop-up-profile .user-profile {
+    width: 61px;
+    aspect-ratio: 1/1;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -46px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid #fff;
+    background-image: url(https://picsum.photos/id/65/200/300);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.pop-up-profile p{
+  margin: 0;
+}
+
+
+
+
+
+@keyframes fadeIn{
+
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                        MEDIA QUERY
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+@media only screen and (max-width: 1400px){
+.text-block h1 {
+    font-size: 54px;
+    line-height: 57px;
+}
+
+
+
+}
+@media only screen and (max-width: 1349px){
+ .pop-up-1 {
+    width: 54%;
+    right: 0%;
+    z-index: 1;
+    bottom: 168px;
+}
+.pop-up-3 {
+    bottom: 277px;
+    right: 45px;
+    width: 54%;
+}
+.pop-up-2 {
+  right: 41px;
+  width: 54%;
+
+}
+
+
+
+
+}
+@media only screen and (max-width: 1251px){
+.text-block h1{
+  font-size: 45px;
+}
+.text-block button {
+    font-size: 26px;
+}
+.pop-up-1 {
+    right: 8%;
+}
+.rt-block {
+    right: -24px;
+}
+.pop-up-2{
+  padding-block: 8px;
+}
+.pop-up-1{
+  padding-block: 8px;
+}
+.pop-up-3{
+  padding-block: 8px;
+}
+
+
+
+
+
+
+}
+@media only screen and (max-width: 1199px) {
+.rt-block {
+    right: 0;
+}
+.pop-up-profile p{
+font-size: 13px;
+}
+
+.pop-up-images .pop-up p {
+  font-size: 13px;
+}
+
+
+
+}
+@media only screen and (max-width: 599px) {
+.text-block button {
+    font-size: 22px;
+    font-style: italic;
+    border-radius: 7px;
+    box-shadow: -0.627px 5.967px 10px 0px rgb(35 19 43 / 86%);
+    padding-inline: 15px;
+    padding-block: 16px;
+}
+.text-block h1 {
+    font-size: 40px;
+}
+.pop-up-images {
+    width: 78%;
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1%;
+    gap: 7px;
+}
+.pop-up-profile {
+    position: inherit;
+    bottom: 234px;
+    right: 0;
+}
+.rt-block img {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+@media only screen and (max-width: 480px){
+.rt-block{
+    right: 0;
+}
+.pop-up-images .pop-up p {
+    color: #000;
+    margin: 0;
+    font-size: 14px;
+}
+.pop-up-images .pop-up{
+    padding-block: 12px;
+}
+
+
+}
+
+@media only screen and (max-width: 420px){
+.rt-block img {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+.pop-up-images{
+    transform: translateX(0%);
+
+}
+.pop-up-profile {
+    margin-block-start: 283px;
+}
+.pop-up-images{
+    position: inherit;
+}
+.rt-block .image-block {
+    height: 51%;
+    width: 100%;
+}
+.pop-up-images {
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 349px;
+    position: relative;
+    top: -141px;
+}
+.text-block h1 {
+    font-size: 33px;
+    line-height: 36px;
+}
+.logo-block img{
+    width: 60%;
+}
+.text-block button{
+font-size: 22px;
+
+
+
+
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
